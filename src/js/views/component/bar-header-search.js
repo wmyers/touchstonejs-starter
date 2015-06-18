@@ -2,6 +2,7 @@ var React = require('react'),
 	SetClass = require('classnames'),
 	Navigation = require('touchstonejs').Navigation,
 	Tappable = require('react-tappable'),
+	Link = require('touchstonejs').Link,
 	UI = require('touchstonejs').UI;
 
 var Timers = require('react-timers');
@@ -133,7 +134,7 @@ module.exports = React.createClass({
 		return (
 			<UI.View>
 				<UI.Headerbar type="default" label="Filter Months">
-					<UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" label="Back" icon="ion-chevron-left" />
+					<Link to="home" viewTransition="reveal-from-right" className="Headerbar-button ion-chevron-left" component="button">Back</Link>
 				</UI.Headerbar>
 				<Search searchString={this.state.searchString} onChange={this.updateSearch} />
 				<UI.ViewContent grow scrollable>
@@ -143,4 +144,3 @@ module.exports = React.createClass({
 		);
 	}
 });
-

@@ -12,7 +12,7 @@ var HeaderList = React.createClass({
 
 		var months = [];
 		var	lastSeason = '';
-		
+
 		this.props.months.forEach(function (month, i) {
 
 			var season = month.season;
@@ -28,7 +28,7 @@ var HeaderList = React.createClass({
 			month.key = 'month-' + i;
 			months.push(<div className="list-item"><div className="item-inner">{month.name}</div></div>);
 		});
-		
+
 		return (
 			<div className="panel mb-0">
 				{months}
@@ -45,7 +45,7 @@ module.exports = React.createClass({
 		return (
 			<UI.View>
 				<UI.Headerbar type="default" label="Categorised List">
-					<UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" icon="ion-chevron-left" label="Back" />
+					<Link to="home" viewTransition="reveal-from-right" className="Headerbar-button ion-chevron-left" component="button">Back</Link>
 				</UI.Headerbar>
 				<UI.ViewContent grow scrollable>
 					<HeaderList months={Months} />

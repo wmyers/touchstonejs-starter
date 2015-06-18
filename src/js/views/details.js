@@ -2,6 +2,7 @@ var React = require('react'),
 	Tappable = require('react-tappable'),
 	Dialogs = require('touchstonejs').Dialogs,
 	Navigation = require('touchstonejs').Navigation,
+	Link = require('touchstonejs').Link,
 	UI = require('touchstonejs').UI;
 
 var Timers = require('react-timers')
@@ -54,7 +55,7 @@ module.exports = React.createClass({
 		return (
 			<UI.View>
 				<UI.Headerbar type="default" label={[this.props.user.name.first, this.props.user.name.last].join(' ')}>
-					<UI.HeaderbarButton showView={this.props.prevView} viewTransition="reveal-from-right" label="Back" icon="ion-chevron-left" />
+					<Link to="home" viewTransition="reveal-from-right" className="Headerbar-button ion-chevron-left" component="button">Back</Link>
 					<UI.LoadingButton loading={this.state.processing} disabled={!this.state.formIsValid} onTap={this.processForm} label="Save" className="Headerbar-button right is-primary" />
 				</UI.Headerbar>
 				<UI.ViewContent grow scrollable>

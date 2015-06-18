@@ -12,7 +12,8 @@ module.exports = React.createClass({
 	getInitialState: function () {
 		return {
 			popup: {
-				visible: false
+				visible: false,
+				iconName: 'ion-load-c'
 			}
 		};
 	},
@@ -44,7 +45,8 @@ module.exports = React.createClass({
 		this.setTimeout(function () {
 			self.setState({
 				popup: {
-					visible: false
+					visible: false,
+					iconName: 'ion-load-c'
 				}
 			});
 		}, 3000);

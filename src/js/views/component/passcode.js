@@ -1,6 +1,7 @@
 var React = require('react'),
 	Dialogs = require('touchstonejs').Dialogs,
 	Navigation = require('touchstonejs').Navigation,
+	Link = require('touchstonejs').Link,
 	UI = require('touchstonejs').UI;
 
 module.exports = React.createClass({
@@ -20,7 +21,7 @@ module.exports = React.createClass({
 		return (
 			<UI.View>
 				<UI.Headerbar type="default" label="Enter Passcode">
-					<UI.HeaderbarButton showView="home" viewTransition="reveal-from-right" icon="ion-chevron-left" label="Back" />
+					<Link to="home" viewTransition="reveal-from-right" className="Headerbar-button ion-chevron-left" component="button">Back</Link>
 				</UI.Headerbar>
 				<UI.Passcode action={this.handlePasscode} helpText="Enter a passcode" />
 			</UI.View>
